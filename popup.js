@@ -29,7 +29,8 @@ function loadNew() {
 				var thumb = $('<img/>', {
 					src: child.data.thumbnail
 				});
-				thumb.addClass('alignTop');
+				//	Add this style to align the image to the left and 
+				//	flow the text to the right, top to bottom.
 				thumb.css('float', 'left');
 
 				var link = $('<a/>', {
@@ -38,7 +39,6 @@ function loadNew() {
 					text: child.data.title,
 					target:'_blank'
 				});
-				link.addClass('alignTop');
 				link.html("&nbsp;" + link.html() + "&nbsp;&nbsp;").prepend(thumb).appendTo(newDiv);
 
 				//	Set the div's left and right margin.
