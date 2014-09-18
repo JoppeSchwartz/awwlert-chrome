@@ -3,7 +3,7 @@
 
   "name": "AWWlert",
   "description": "Get yer AWW on!",
-  "version": "0.2",
+  "version": "0.3",
 
   "browser_action": {
     "default_icon": {

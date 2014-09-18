@@ -18,14 +18,17 @@
 
       .tickerItem {
         top: 0px;
-        display: inline;
+        display: inline-block;
         max-width: 250px;
-        word-wrap: break-word;
-        overflow-x: hidden;
-        
+        white-space: normal;
+        vertical-align: top;
+        /*overflow-x: hidden;*/
       }
       .ticker {
         min-height: 100px;
+      }
+      .alignTop {
+        /*vertical-align: top;*/
       }
     </style>
 
@@ -36,7 +39,7 @@
   <body>
     <div class="ticker">
       <marquee id="awwTicker" class="ticker" behavior="scroll" direction="left" scrollamount="2">
-        <!-- TESTING <img src="panda_icon_128.png"/> -->
+
       </marquee>
     </div>
   </body>

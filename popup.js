@@ -29,6 +29,8 @@ function loadNew() {
 				var thumb = $('<img/>', {
 					src: child.data.thumbnail
 				});
+				thumb.addClass('alignTop');
+				thumb.css('float', 'left');
 
 				var link = $('<a/>', {
 					id: 'link' + i,
@@ -36,20 +38,21 @@ function loadNew() {
 					text: child.data.title,
 					target:'_blank'
 				});
+				link.addClass('alignTop');
 				link.html("&nbsp;" + link.html() + "&nbsp;&nbsp;").prepend(thumb).appendTo(newDiv);
 
 				//	Set the div's left and right margin.
 				newDiv.appendTo($('#awwTicker'));
 				
 				//if (newDiv.width() > 250) newDiv.width(250);
-				 console.log('width = ' + newDiv.width())
+				// console.log('width = ' + newDiv.width())
 				// console.log('outer width ' + newDiv.outerWidth())
 				// newDiv.css('margin-left', marginLeft);
 				// newDiv.css('margin-right', marginLeft + newDiv.width() + MARGIN_PADDING);
 				// marginLeft += newDiv.width() + MARGIN_PADDING;
 			}
 			//	Use the silky-smooth marquee (http://remysharp.com/2008/09/10/the-silky-smooth-marquee)
-			$('marquee').marquee().mouseover(function(){
+			$('marquee').marquee('ticker').mouseover(function(){
 				$(this).trigger('stop');
 			}).mouseout(function() {
 				$(this).trigger('start');
